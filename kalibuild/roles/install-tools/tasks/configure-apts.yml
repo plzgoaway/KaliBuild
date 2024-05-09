@@ -1,0 +1,24 @@
+- name: "unmasking snapd service"
+  become: true
+  become_method: sudo
+  become_user: root
+  systemd_service:
+    name: snapd
+    state: stopped
+    masked: no
+- name: "Enabling snapd service"
+  become: true
+  become_method: sudo
+  become_user: root
+  systemd_service:
+    name: snapd
+    state: started
+    enabled: true
+- name: "enabling snapd.apparmor service"
+  become: true
+  become_method: sudo
+  become_user: root
+  systemd_service:
+    name: snapd.apparmor
+    state: started
+    enabled: true

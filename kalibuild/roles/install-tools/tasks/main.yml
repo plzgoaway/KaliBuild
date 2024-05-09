@@ -1,4 +1,9 @@
 ---
 # tasks file for install-tools
-- include_tasks:
-    kerbrute.yml
+- include_tasks: apt-stuff.yml
+- include_tasks: configure-apts.yml
+- include_tasks: kerbrute.yml
+- include_tasks: gems-tools.yml
+- include_tasks: py-tools.yml  
+- include_tasks: snap-apps.yml
+  #- include_tasks: adalanche.yml

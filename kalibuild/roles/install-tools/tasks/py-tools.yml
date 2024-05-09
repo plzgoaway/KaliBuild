@@ -1,0 +1,14 @@
+- name: "Installing python tools, pipx"
+  community.general.pipx:
+    name: "{{ item.name }}"
+    source: "{{item.url}}"
+    state: latest
+  loop:
+    - { name: 'impacket', url: 'git+https://github.com/fortra/impacket.git' }
+    - { name: 'crackmapexec', url: 'git+https://github.com/Porchetta-Industries/CrackMapExec.git' }
+      # - { name: 'certipy-ad', url: 'git+https://github.com/l4ak/Certipy.git'}
+- name: "installing python tools, pip3"
+  pip:
+    name: certipy-ad
+    state: latest
+    executable: pip3

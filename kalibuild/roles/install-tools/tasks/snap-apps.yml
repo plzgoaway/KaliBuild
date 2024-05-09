@@ -1,0 +1,4 @@
+- name: "installing obsidian"
+  community.general.snap:
+    name: obsidian
+    classic: true

@@ -1,10 +1,4 @@
 
-- name: "Install go"
-  apt:
-    name: golang-go
-    state: present
-  become: true
-  become_method: sudo
 - name: "Cloing kerbrute github repo"
   git:
     repo: "https://github.com/ropnop/kerbrute"

@@ -1,0 +1,14 @@
+
+- name: "Cloning directory"
+  git:
+    repo: "https://github.com/lkarlslund/Adalanche"
+    dest: "/tmp/adalanche"
+- name: "Building Adalanche"
+  shell: | 
+  cd /tmp/adalanche/adalance
+  go build
+- name: "Copying Adalance to /.local/bin"
+  copy:
+    src: "/tmp/adalanche/adalanche/adalanche"
+    dest: "{{ansible_env.HOME}}/.local/bin"
+    mode: 0744

@@ -1,0 +1,28 @@
+
+- name: "Update repos and stuff"
+  apt: update_cache=yes force_apt_get=yes
+  become: true
+  become_method: sudo
+
+- name: "Fix and upgrade all packages"
+  apt: upgrade=yes force_apt_get=yes
+  become: true
+  become_method: sudo
+
+- name: "Install packages"
+  package:
+    name:
+      - jq
+      - pipx
+      - ntpdate
+      - flameshot
+      - exiftool
+      - seclists
+      - bloodhound
+      - golang-go
+      - powershell
+      - snap
+      - snapd
+    state: latest
+  become: true
+  become_method: sudo
