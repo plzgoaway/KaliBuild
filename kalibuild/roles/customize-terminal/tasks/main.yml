@@ -1,0 +1,8 @@
+---
+# tasks file for customize-terminal
+
+- name: "Copy bashRC"
+  copy:
+    src: "{{role_path}}/files/.bashrc"
+    dest: "{{ansible_env.HOME}}"
+
