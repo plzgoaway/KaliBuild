@@ -1,4 +1,6 @@
 - name: "installing obsidian"
+  become: true
+  become_method: sudo
   community.general.snap:
     name: obsidian
     classic: true
