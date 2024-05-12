@@ -23,6 +23,7 @@
       - powershell
       - snap
       - snapd
+      - xclip
     state: latest
   become: true
   become_method: sudo
