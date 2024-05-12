@@ -3,4 +3,4 @@ Clone repo\
 cd into repo\
 sudo whoami\
 ansible-galaxy install -r requirements.yml\
-ansible-playbook main.yml\
+ansible-playbook main.yml
