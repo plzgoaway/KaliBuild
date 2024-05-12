@@ -1,0 +1,18 @@
+- name: "Downloading Nessus to tmp"
+  get_url:
+    url: "https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.7.2-ubuntu1404_amd64.deb"
+    dest: "/tmp/Nessus-10.7.2-ubuntu1404_amd64.deb"
+    mode: 0770
+- name: "Installing Nessus"
+  apt:
+    deb: "/tmp/Nessus-10.7.2-ubuntu1404_amd64.deb"
+  become: true
+  become_method: sudo
+- name: "Starting service and enabling it"
+  become: true
+  become_method: sudo
+  become_user: root
+  systemd_service:
+    name: nessusd.service
+    state: started
+    enabled: true

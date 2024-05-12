@@ -6,4 +6,5 @@
 - include_tasks: gems-tools.yml
 - include_tasks: py-tools.yml  
 - include_tasks: snap-apps.yml
+- include_tasks: nessus.yml
   #- include_tasks: adalanche.yml
