@@ -27,6 +27,12 @@
       - gobuster
       - gh
       - autorecon
+      - coercer
+      - getsploit
+      - pspy
+      - sploitscan
+      - netexec
+      - vopono
     state: latest
   become: true
   become_method: sudo
