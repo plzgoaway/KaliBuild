@@ -25,6 +25,7 @@
       - snapd
       - xclip
       - gobuster
+      - gh
     state: latest
   become: true
   become_method: sudo
