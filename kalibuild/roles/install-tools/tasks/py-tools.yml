@@ -12,3 +12,8 @@
     name: certipy-ad
     state: latest
     executable: pip3
+- name: "Installing WsgiDAV, pip3"
+  pip:
+    name: wsgidav
+    state: latest
+    executable: pip3

@@ -33,7 +33,6 @@
       - sploitscan
       - netexec
       - vopono
-      - wsgidav
     state: latest
   become: true
   become_method: sudo
